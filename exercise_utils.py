@@ -282,12 +282,12 @@ def plot_pressure_comparison(target_across_sims, estimation_across_sims):
 
 
 
-def plot_error_bar_plot(error, xaxis_title):
+def plot_error_bar_plot(error, xaxis_title, yaxis_title):
     fig = go.Figure()
     fig.add_trace(go.Bar(x = list(range(len(error))), y = error))
     fig.update_layout(title = 'Error in estimated pressure', 
                         xaxis_title =xaxis_title,
-                        yaxis_title ="Pressure difference (m)",
+                        yaxis_title =yaxis_title,
                         legend_title="Legend",
                         template =  custom_template)
     fig.show()
